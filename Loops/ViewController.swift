@@ -15,17 +15,47 @@ class ViewController: UIViewController {
     }
 
     @IBOutlet weak var textView: UITextView!
+    var output = ""
+    
     
     @IBAction func forInLoop(_ sender: Any) {
         
         var fruit = ["apple", "pear", "peach", "strawberry", "mango"]
         
-        var output = ""
+     
         for item in fruit {
             output += "\(item)\n"
         }
         textView.text = output
         }
+    
+    @IBAction func forLoop(_ sender: Any) {
+        var veggies = ["tomato","carrot", "pea","celery"]
+        for i in 0...3{output += "\(veggies[i])\n"
+            
+        }
+        textView.text = output
+    }
+    @IBAction func forCount(_ sender: Any) {
+        var drinks = ["tea","coffee","milk","soda"]
+        
+        for i in 0..<3{
+            output += "\(drinks[i])\n"
+        }
+        textView.text = output
+    }
+    
+    @IBAction func dictionaryLoop(_ sender: Any) {
+        
+        var contact = ["name":"tom","address":"123 Fake Street","Phone":"123-1234"]
+        
+        var output = ""
+        for (key,value) in contact {
+        output += "\(key): \(value)\n"
+        
+    }
+        textView.text = output
+    
     }
     
     
